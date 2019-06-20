@@ -60,9 +60,9 @@ img {
     width: 100%;
 }
 .sub{
-    padding: 1%;
+    
     font-weight: 500;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 .modal-footer {
     display: -ms-flexbox;
@@ -81,4 +81,8 @@ img {
     cursor: pointer;
     background: #fff;
     font-weight: 900;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 0rem;
 }

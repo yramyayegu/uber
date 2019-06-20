@@ -24,6 +24,7 @@ export class AppComponent implements OnInit {
 dist :number;
 cost : number;
 
+  angular: any;
 pool:number;
 go : number;
 moto : number;
@@ -138,5 +139,17 @@ display='none'; //default Variable
  closeModalDialog(){
   this.display='none'; //set none css after close dialog
  }
+
+ findride(x,y)
+  {
+    var angular: any;
+    document.getElementById('hello').style.display='block';
+    document.getElementById('choose').style.display='none';
+    
+    console.log(x);
+    console.log(y);
+  }
+
+
 
 }

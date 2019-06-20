@@ -28,17 +28,43 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header"><p style="margin: 0;font-weight: 900;">Choose a ride</p></div>
-      <div class="modal-body">   
-        <div class="row">
-          <div class="col-md-2"><img src="../assets/images/UberPool.jpg"> </div><div class="col-md-6"> <p class="sub">Pool</p></div><div class="col-md-3"><p> ₹ {{ pool }} </div>
-          <div class="col-md-2"><img src="../assets/images/UberX.jpg"> </div><div class="col-md-6"> <p class="sub">Uber Go</p></div><div class="col-md-3"> ₹ {{ go }}  </div>
-          <div class="col-md-2"><img src="../assets/images/bike.jpg"> </div><div class="col-md-6"> <p class="sub">Moto</p></div><div class="col-md-3"> ₹ {{ moto }}  </div>
+      <div class="modal-body">  
+        <div id="choose" style="display: block" >
+        <div class="row" style="    border-bottom: #00000021 solid 1px;" (click)='findride(1,pool )'>
+          <div class="col-md-2"><img src="../assets/images/UberPool.jpg"> </div><div class="col-md-6"> <p class="sub">Pool</p>
+          <p>persons - 2</p><p> Shared rides with the option to walk </p></div><div class="col-md-3"><p class="sub"> ₹ {{ pool }} </p></div>
+        </div>
+        <div class="row" style="    border-bottom: #00000021 solid 1px;">
+          <div class="col-md-2"><img src="../assets/images/UberX.jpg"> </div><div class="col-md-6"> <p class="sub">Uber Go</p>
+            <p>persons - 4</p><p> Affordable, compact rides </p>
+          
+          </div><div class="col-md-3"><p class="sub">  ₹ {{ go }} </p> </div> </div>
+          <div class="row">
+          <div class="col-md-2"><img src="../assets/images/bike.jpg"> </div><div class="col-md-6"> <p class="sub">Moto</p>
+            <p>persons - 1</p><p> Affordable motorcycle rides </p>
+          
+          </div><div class="col-md-3"><p class="sub">  ₹ {{ moto }} </p> </div> 
+          
       </div> </div>
-      <div class="modal-footer">
+      <div id='hello' class="hello" style="display: none">
+          Your Ride Cannot be booked,
+
+          <h2> Sorry for in convenince</h2>
+          Try After some time....
+      
+         </div>
+    </div>
+      <div class="modal-footer"> 
         <button type="button" class="btn btn-default" (click)="closeModalDialog()" >Close</button>
       </div>
-   
+  
+
+
   </div>
 </div>
 </div>
+
+
+
+
 </div>
