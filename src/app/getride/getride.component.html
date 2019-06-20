@@ -1,0 +1,30 @@
+<!--
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map> -->
+
+<div class="container">
+
+  <h1>{{ title }}</h1>   
+  <h1>clat : {{ clat }}</h1>
+  <h1>clng : {{ clng }}</h1>
+  <h5>From: {{address}}</h5>  
+  <div>Latitude: {{latitude}}</div>
+  <div>Longitude: {{longitude}}</div> 
+
+  <div class="form-group">
+    <label>Enter address</label>
+    <input type="text" class="form-control" (keydown.enter)="$event.preventDefault()" placeholder="Search Nearest Location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search>
+  </div>
+
+  <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+       <agm-marker [latitude]="clat" [longitude]="clng" [markerDraggable]="true"
+      (dragEnd)="markerDragEnd($event)"></agm-marker>
+       <agm-direction [origin]="origin" [destination]="destination"></agm-direction> 
+  </agm-map>
+
+<!-- <agm-map [latitude]="clat" [longitude]="clng">
+  <agm-direction [origin]="origin" [destination]="destination"></agm-direction>
+</agm-map> -->
+ 
+</div>

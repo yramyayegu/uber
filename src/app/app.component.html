@@ -1,0 +1,44 @@
+<div class="container">
+  <div class='header'><h1>{{ title }}</h1>   </div>
+  <h5>Your Current Position : {{address}}</h5>  
+  <div class="form-group">
+    Enter address : <input type="text" style='display: initial;width: 90%;' class="form-control" (keydown.enter)="$event.preventDefault()" placeholder="Search Nearest Location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search>
+  </div>
+
+  <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+       <agm-marker [latitude]="clat" [longitude]="clng" [markerDraggable]="true"
+      (dragEnd)="markerDragEnd($event)"></agm-marker>
+       <agm-direction [origin]="origin" [destination]="destination"></agm-direction>
+  </agm-map>
+
+<!-- <agm-map [latitude]="clat" [longitude]="clng">
+  <agm-direction [origin]="origin" [destination]="destination"></agm-direction>
+</agm-map> -->
+<!-- After clicking the button open the modal dialog using open/close event binding methods -->
+
+
+
+
+
+
+<div class="backdrop" [ngStyle]="{'display':display}"></div>  
+
+<!-- modal -->
+<div class="modal" tabindex="-1" role="dialog"  [ngStyle]="{'display':display}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header"><p style="margin: 0;font-weight: 900;">Choose a ride</p></div>
+      <div class="modal-body">   
+        <div class="row">
+          <div class="col-md-2"><img src="../assets/images/UberPool.jpg"> </div><div class="col-md-6"> <p class="sub">Pool</p></div><div class="col-md-3"><p> ₹ {{ pool }} </div>
+          <div class="col-md-2"><img src="../assets/images/UberX.jpg"> </div><div class="col-md-6"> <p class="sub">Uber Go</p></div><div class="col-md-3"> ₹ {{ go }}  </div>
+          <div class="col-md-2"><img src="../assets/images/bike.jpg"> </div><div class="col-md-6"> <p class="sub">Moto</p></div><div class="col-md-3"> ₹ {{ moto }}  </div>
+      </div> </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" (click)="closeModalDialog()" >Close</button>
+      </div>
+   
+  </div>
+</div>
+</div>
+</div>

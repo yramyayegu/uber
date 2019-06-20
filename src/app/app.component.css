@@ -1,0 +1,16 @@
+agm-map {
+    height: 500px;
+  }
+
+.header{
+  background-color: black;
+  color: #ffffff;;
+}
+.container
+{
+  background-color: aliceblue;
+}
+.h5, h5 {
+  font-size: 15px;
+  font-weight: 400;
+}
